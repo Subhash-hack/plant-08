@@ -766,3 +766,25 @@ const PLANT_TIPS = {
         ]
     }
 };
+// ===== Convert GUIDE_DATA → PLANTS (REQUIRED FOR EXPLORE PAGE) =====
+
+const PLANTS = Object.keys(GUIDE_DATA).map(id => {
+    return {
+        id: id,
+        name: GUIDE_DATA[id].name,
+        category: getCategory(GUIDE_DATA[id].name)
+    };
+});
+
+// ===== Category Helper Function =====
+function getCategory(name) {
+    const vegetables = ['Tomato', 'Carrot', 'Cucumber', 'Bell Pepper', 'Broccoli'];
+    const herbs = ['Basil', 'Mint', 'Parsley', 'Thyme', 'Oregano', 'Sage', 'Chives'];
+    const flowers = ['Rose', 'Sunflower', 'Tulip', 'Daffodil', 'Lavender', 'Daisy'];
+
+    if (vegetables.includes(name)) return 'Vegetable';
+    if (herbs.includes(name)) return 'Herb';
+    if (flowers.includes(name)) return 'Flower';
+
+    return 'Other';
+}
