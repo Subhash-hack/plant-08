@@ -11,7 +11,7 @@ Plant-O8 is a web-based platform designed to simplify plant care for everyone. I
 > ⚠️ *Note: Add your demo GIF file in the project folder and name it `demo.gif`*
 
 ---
-
+ 
 ## ❗ Problem Statement
 In today’s busy lifestyle, people often keep plants but struggle to care for them properly due to lack of knowledge and time. Incorrect watering, sunlight exposure, and delayed detection of issues result in poor plant health.
 
